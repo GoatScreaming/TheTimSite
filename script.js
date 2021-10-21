@@ -69,10 +69,6 @@ onlineAuctions.onclick = () =>{
 
 liveAuctions.onclick = () => {
     if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
-        liveAuctionsInfo.style.alignItems = 'start'
-        liveAuctionsInfo.style.textAlign = 'center'
-        liveAuctionsInfo.style.fontSize = '20px'
-        liveAuctionsInfo.style.padding = '0px 20px 0px'
 
         const topBottomLiveAuctions = [onlineAuctions, leaveFeedback];
             topBottomLiveAuctions.forEach(menus => {
@@ -83,6 +79,11 @@ liveAuctions.onclick = () => {
                 middleLiveAuctions.forEach(menus => {
                 menus.className = 'menu opening middle';
         });
+        
+            liveAuctionsInfo.style.alignItems = 'start'
+            liveAuctionsInfo.style.textAlign = 'center'
+            liveAuctionsInfo.style.fontSize = '20px'
+            liveAuctionsInfo.style.padding = '0px 20px 0px'
 
             liveAuctions.className = 'menu selected middle';
 
@@ -99,10 +100,10 @@ liveAuctions.onclick = () => {
                 middleLiveAuctions.forEach(menus => {
                 menus.className = 'menu opening closing middle';
             });
-           
-        liveAuctions.className = 'menu selected deselected middle';
 
         liveAuctionsInfo.style.fontSize = '0px';
+           
+        liveAuctions.className = 'menu selected deselected middle';
 
         liveAuctionsInfo.className = 'info opened closed';
 
