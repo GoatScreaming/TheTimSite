@@ -47,7 +47,7 @@ h1{
 .container {
     display: flex;
     flex-direction: column;
-    /* min-height: 100%;  */
+    /* min-height: 75%; */
     background-color: rgb(100, 200, 255);
     font-family: freehand;
     font-weight: 500;
@@ -108,25 +108,13 @@ h1{
     white-space: pre-wrap;
 }
 
-.readOnly{
-    /* flex-grow: 5;
-    background-color: white;
-    color: rgb(100, 200, 255); */
-    align-items: flex-start;
-    text-align: center;
-    font-size: 20px;
-    padding: 0px 20px;
-    /* transition-property: flex-grow, color, font-size;
-    transition-delay: 250ms, 750ms, 0ms;  
-    transition-duration: 500ms, 250ms, 750ms; */
-}
 
 .opened{
     flex-grow: 5;
     background-color: white;
     color: rgb(100, 200, 255);
-    /* font-size: 40px;  */
-    /* text-decoration: none;  */
+    font-size: 40px;
+    text-decoration: none;
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 750ms, 0ms;  
     transition-duration: 500ms, 250ms, 750ms;

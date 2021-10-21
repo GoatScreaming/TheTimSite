@@ -79,14 +79,14 @@ liveAuctions.onclick = () => {
                 menus.className = 'menu opening middle';
         });
 
-            // liveAuctionsInfo.style.alignItems = 'start'
-            // liveAuctionsInfo.style.textAlign = 'center'
-            // liveAuctionsInfo.style.fontSize = '20px'
-            // liveAuctionsInfo.style.padding = '0px 20px 0px'
+            liveAuctionsInfo.style.alignItems = 'start'
+            liveAuctionsInfo.style.textAlign = 'center'
+            liveAuctionsInfo.style.fontSize = '20px'
+            liveAuctionsInfo.style.padding = '0px 20px 0px'
 
             liveAuctions.className = 'menu selected middle';
 
-            liveAuctionsInfo.className = 'info readOnly opened';
+            liveAuctionsInfo.className = 'info opened';
 
     }else{
 
@@ -100,11 +100,11 @@ liveAuctions.onclick = () => {
                 menus.className = 'menu opening closing middle';
             });
 
-        // liveAuctionsInfo.style.fontSize = '0px';
+        liveAuctionsInfo.style.fontSize = '0px';
            
         liveAuctions.className = 'menu selected deselected middle';
 
-        liveAuctionsInfo.className = 'info readOnly closed';
+        liveAuctionsInfo.className = 'info opened closed';
 
     };  
 };
