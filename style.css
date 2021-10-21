@@ -53,14 +53,13 @@ h1{
 }
 
 .menu{
-    display: flex;
+    display: inline-flex;
     flex-grow: 1;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: 40px;
     color: white;
-    white-space: nowrap;
 }
 
 .selected{
