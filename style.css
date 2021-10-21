@@ -59,7 +59,8 @@ h1{
     justify-content: center;
     cursor: pointer;
     font-size: 40px;
-    color: white;  
+    color: white; 
+    white-space: pre-wrap;
 }
 
 .selected{
