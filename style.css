@@ -60,6 +60,7 @@ h1{
     cursor: pointer;
     font-size: 40px;
     color: white;
+    padding: 20px;
 }
 
 .selected{
@@ -135,10 +136,10 @@ h1{
 
 
 
-/* @font-face {
+@font-face {
     font-family: 'freehand';
     src: url(fonts/Caveat-VariableFont_wght.ttf);
-} */
+}
 
 @keyframes fadeIn {
     from {
