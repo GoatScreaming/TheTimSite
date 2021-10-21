@@ -53,7 +53,7 @@ h1{
 }
 
 .menu{
-    display: inline-flex;
+    display: inline-block;
     flex-grow: 1;
     align-items: center;
     justify-content: center;
