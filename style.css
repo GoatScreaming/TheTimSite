@@ -59,8 +59,7 @@ h1{
     justify-content: center;
     cursor: pointer;
     font-size: 40px;
-    color: white;
-    padding: 0px 20px;
+    color: white;  
 }
 
 .selected{
@@ -133,12 +132,6 @@ h1{
 .middle{
     animation-timing-function: linear;
 } 
-
-.fixWidth{
-    display: inline-block;
-}
-
-
 
 @font-face {
     font-family: 'freehand';
