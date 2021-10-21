@@ -18,9 +18,8 @@ const auctionTimeLink = document.querySelector('.auctionTimeLink')
 const resizeElem = window.onload = () =>{
 
     if((body.clientHeight -= banner.clientHeight) >= 253){
-        // container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
-        // container.style.minWidth = body.clientWidth.toString() + 'px'
-        // body.style.overflowY = 'hidden'
+        container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
+        body.style.overflowY = 'hidden'
 
     }else{
         container.style.height = '253px';
@@ -80,14 +79,14 @@ liveAuctions.onclick = () => {
                 menus.className = 'menu opening middle';
         });
 
-            liveAuctionsInfo.style.alignItems = 'start'
-            liveAuctionsInfo.style.textAlign = 'center'
-            liveAuctionsInfo.style.fontSize = '20px'
-            liveAuctionsInfo.style.padding = '0px 20px 0px'
+            // liveAuctionsInfo.style.alignItems = 'start'
+            // liveAuctionsInfo.style.textAlign = 'center'
+            // liveAuctionsInfo.style.fontSize = '20px'
+            // liveAuctionsInfo.style.padding = '0px 20px 0px'
 
             liveAuctions.className = 'menu selected middle';
 
-            liveAuctionsInfo.className = 'info opened';
+            liveAuctionsInfo.className = 'info readOnlyOpen';
 
     }else{
 
@@ -105,7 +104,7 @@ liveAuctions.onclick = () => {
            
         liveAuctions.className = 'menu selected deselected middle';
 
-        liveAuctionsInfo.className = 'info opened closed';
+        liveAuctionsInfo.className = 'info readOnlyOpen closed';
 
     };  
 };
