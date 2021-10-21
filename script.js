@@ -19,6 +19,7 @@ const resizeElem = window.onload = () =>{
 
     if((body.clientHeight -= banner.clientHeight) >= 253){
         container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
+        container.style.minWidth = body.clientWidth.toString() + 'px'
         body.style.overflowY = 'hidden'
 
     }else{
