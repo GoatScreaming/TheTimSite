@@ -55,12 +55,12 @@ h1{
 .menu{
     display: flex;
     flex-grow: 1;
-    width: 100%;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: 40px;
     color: white;
+    padding: 0px 20px;
 }
 
 .selected{
