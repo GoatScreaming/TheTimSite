@@ -47,6 +47,7 @@ h1{
 .container {
     display: flex;
     flex-direction: column;
+    min-height: 75%;
     background-color: rgb(100, 200, 255);
     font-family: freehand;
     font-weight: 500;
