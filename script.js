@@ -82,7 +82,7 @@ liveAuctions.onclick = () => {
 
             liveAuctionsInfo.style.alignItems = 'start'
             liveAuctionsInfo.style.textAlign = 'center'
-            liveAuctionsInfo.style.fontSize = '5px'
+            liveAuctionsInfo.style.fontSize = '16px'
             liveAuctionsInfo.style.padding = '0px 20px 0px'
 
             liveAuctions.className = 'menu selected middle';
