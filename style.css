@@ -135,10 +135,10 @@ h1{
 
 
 
-@font-face {
+/* @font-face {
     font-family: 'freehand';
     src: url(fonts/Caveat-VariableFont_wght.ttf);
-}
+} */
 
 @keyframes fadeIn {
     from {
