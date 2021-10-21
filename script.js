@@ -18,8 +18,8 @@ const auctionTimeLink = document.querySelector('.auctionTimeLink')
 const resizeElem = window.onload = () =>{
 
     if((body.clientHeight -= banner.clientHeight) >= 253){
-        // container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
-        // body.style.overflowY = 'hidden'
+        container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
+        body.style.overflowY = 'hidden'
 
     }else{
         container.style.height = '253px';
