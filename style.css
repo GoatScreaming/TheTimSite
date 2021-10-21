@@ -51,6 +51,8 @@ h1{
     background-color: rgb(100, 200, 255);
     font-family: freehand;
     font-weight: 500;
+    will-change: auto;
+
 }
 
 .menu{
@@ -62,6 +64,8 @@ h1{
     font-size: 40px;
     color: white; 
     white-space: pre-wrap;
+    will-change: auto;
+
 }
 
 .selected{
@@ -70,6 +74,7 @@ h1{
     transition-property: background-color, color;
     transition-delay: 0s, 0s;
     transition-duration: 250ms, 500ms;
+    will-change: auto;
 }
 
 .deselected{
@@ -78,6 +83,7 @@ h1{
     transition-property: background-color, color;
     transition-delay: 0s, 0s;
     transition-duration: 250ms, 500ms;
+    will-change: auto;
 }
 
 .opening{
@@ -87,6 +93,7 @@ h1{
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 0ms, 250ms;
     transition-duration: 500ms, 250ms, 500ms;
+    will-change: auto;
 }
 
 .closing{
@@ -96,6 +103,7 @@ h1{
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 500ms, 0ms;
     transition-duration: 250ms, 250ms, 500ms;
+    will-change: auto;
 }
 
 .info{
@@ -106,6 +114,7 @@ h1{
     flex-grow: 0;
     font-size: 0px;
     white-space: pre-wrap;
+    will-change: auto;
 }
 
 
@@ -118,6 +127,8 @@ h1{
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 750ms, 0ms;  
     transition-duration: 500ms, 250ms, 750ms;
+    will-change: auto;
+
 }
 
 .closed{
@@ -127,6 +138,7 @@ h1{
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 0ms, 250ms;  
     transition-duration: 250ms, 250ms, 250ms;
+    will-change: auto;
 }
 
 .topBottom{
