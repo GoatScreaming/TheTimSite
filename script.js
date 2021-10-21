@@ -70,7 +70,13 @@ onlineAuctions.onclick = () =>{
 liveAuctions.onclick = () => {
     if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
 
-        const topBottomLiveAuctions = [onlineAuctions, leaveFeedback];
+        liveAuctionsInfo.style.alignItems = 'start'
+        liveAuctionsInfo.style.textAlign = 'center'
+        liveAuctionsInfo.style.fontSize = '16px'
+        liveAuctionsInfo.style.padding = '0px 20px 0px'
+
+        setTimeout(openLiveAuctions = () =>{
+            const topBottomLiveAuctions = [onlineAuctions, leaveFeedback];
             topBottomLiveAuctions.forEach(menus => {
             menus.className = 'menu opening topBottom';
         });
@@ -80,14 +86,12 @@ liveAuctions.onclick = () => {
                 menus.className = 'menu opening middle';
         });
 
-            liveAuctionsInfo.style.alignItems = 'start'
-            liveAuctionsInfo.style.textAlign = 'center'
-            liveAuctionsInfo.style.fontSize = '16px'
-            liveAuctionsInfo.style.padding = '0px 20px 0px'
-
             liveAuctions.className = 'menu selected middle';
 
             liveAuctionsInfo.className = 'info opened';
+        }, 100)
+
+        
 
     }else{
 
