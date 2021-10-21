@@ -86,7 +86,7 @@ liveAuctions.onclick = () => {
 
             liveAuctions.className = 'menu selected middle';
 
-            liveAuctionsInfo.className = 'info readOnlyOpen';
+            liveAuctionsInfo.className = 'info readOnly opened';
 
     }else{
 
@@ -100,11 +100,11 @@ liveAuctions.onclick = () => {
                 menus.className = 'menu opening closing middle';
             });
 
-        liveAuctionsInfo.style.fontSize = '0px';
+        // liveAuctionsInfo.style.fontSize = '0px';
            
         liveAuctions.className = 'menu selected deselected middle';
 
-        liveAuctionsInfo.className = 'info readOnlyOpen closed';
+        liveAuctionsInfo.className = 'info readOnly closed';
 
     };  
 };
