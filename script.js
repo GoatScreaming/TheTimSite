@@ -69,6 +69,10 @@ onlineAuctions.onclick = () =>{
 
 liveAuctions.onclick = () => {
     if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
+        liveAuctionsInfo.style.alignItems = 'start'
+        liveAuctionsInfo.style.textAlign = 'center'
+        liveAuctionsInfo.style.fontSize = '20px'
+        liveAuctionsInfo.style.padding = '0px 20px 0px'
 
         const topBottomLiveAuctions = [onlineAuctions, leaveFeedback];
             topBottomLiveAuctions.forEach(menus => {
@@ -81,11 +85,6 @@ liveAuctions.onclick = () => {
         });
 
             liveAuctions.className = 'menu selected middle';
-
-            // liveAuctionsInfo.style.alignItems = 'start'
-            // liveAuctionsInfo.style.textAlign = 'center'
-            liveAuctionsInfo.style.fontSize = '15px'
-            // liveAuctionsInfo.style.padding = '0px 20px 0px'
 
             liveAuctionsInfo.className = 'info opened';
 
