@@ -79,7 +79,7 @@ liveAuctions.onclick = () => {
                 menus.className = 'menu opening middle';
         });
 
-            liveAuctionsInfo.style.alignItems = 'start'
+            liveAuctionsInfo.style.alignItems = 'flex-start'
             liveAuctionsInfo.style.textAlign = 'center'
             liveAuctionsInfo.style.fontSize = '20px'
             liveAuctionsInfo.style.padding = '0px 20px 0px'
@@ -124,7 +124,7 @@ ourStory.onclick = () =>{
 
             ourStory.className = 'menu selected middle';
 
-            ourStoryInfo.style.alignItems = 'start'
+            ourStoryInfo.style.alignItems = 'flex-start'
             ourStoryInfo.style.textAlign = 'center'
             ourStoryInfo.style.fontSize = '20px'
             ourStoryInfo.style.padding = '0px 20px 0px'
