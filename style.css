@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden; 
+    /* overflow-y: hidden;  */
+    animation: fadeIn 1000ms;
+    /* min-width: 200px; */
+}
+
+.banner{
+    position: relative;
+}
+
+.bannerimg{
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(100, 200, 255);
+    font-family: freehand;
+}
+
+h1{
+    position: absolute;
+    margin: 10px auto 0px auto;
+    left: 0;
+    right: 0;
+    font-size: 60px;
+    font-family: freehand;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px rgba(115, 155, 211, 0.541);
+    
+}
+
+.menu{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+}
+
+.selected{
+    background-color: white;
+    color: rgb(100, 200, 255);
+    transition-property: background-color, color;
+    transition-delay: 0s, 0s;
+    transition-duration: 250ms, 500ms;
+}
+
+.deselected{
+    background-color: inherit;
+    color: white;
+    transition-property: background-color, color;
+    transition-delay: 0s, 0s;
+    transition-duration: 250ms, 500ms;
+}
+
+.opening{
+    flex-grow: 0;
+    font-size: 0px; 
+    color: transparent;
+    transition-property: flex-grow, color, font-size;
+    transition-delay: 250ms, 0ms, 250ms;
+    transition-duration: 500ms, 250ms, 500ms;
+}
+
+.closing{
+    flex-grow: 1;
+    font-size: 40px;
+    color: white;
+    transition-property: flex-grow, color, font-size;
+    transition-delay: 250ms, 500ms, 0ms;
+    transition-duration: 250ms, 250ms, 500ms;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    flex-grow: 0;
+    font-size: 0px;
+}
+
+.opened{
+    flex-grow: 5;
+    background-color: white;
+    color: rgb(100, 200, 255);
+    font-size: 40px;
+    text-decoration: none;
+    transition-property: flex-grow, color, font-size;
+    transition-delay: 250ms, 750ms, 0ms;  
+    transition-duration: 500ms, 250ms, 750ms;
+}
+
+.closed{
+    flex-grow: 0;
+    font-size: 0px;
+    color: transparent;
+    transition-property: flex-grow, color, font-size;
+    transition-delay: 250ms, 0ms, 250ms;  
+    transition-duration: 250ms, 250ms, 250ms;
+}
+
+.topBottom{
+    animation-timing-function: ease-in-out;
+}
+
+.middle{
+    animation-timing-function: linear;
+}  
+
+
+
+@font-face {
+    font-family: 'freehand';
+    src: url(fonts/Caveat-VariableFont_wght.ttf);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
