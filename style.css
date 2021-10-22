@@ -64,6 +64,7 @@ h1{
     font-size: 40px;
     color: white; 
     white-space: pre-wrap;
+       
 }
 
 .selected{
@@ -122,6 +123,7 @@ h1{
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 750ms, 0ms;  
     transition-duration: 500ms, 250ms, 750ms;
+    /* animation: scale 1s linear   */
 }
 
 .closed{
@@ -156,6 +158,15 @@ h1{
         opacity: 1;
     }
 }
+
+/* @keyframes scale {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+} */
 
 
 
