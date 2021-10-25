@@ -114,7 +114,7 @@ h1{
     flex-grow: 5;
     background-color: white;
     color: rgb(100, 200, 255);
-    font-size: 40px;
+    /* font-size: 40px; */
     text-decoration: none;
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 750ms, 0ms;  
