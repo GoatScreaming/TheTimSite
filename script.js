@@ -104,7 +104,7 @@ liveAuctions.onclick = () => {
            
         liveAuctions.className = 'menu selected deselected middle';
 
-        liveAuctionsInfo.className = 'info opened closed';
+        liveAuctionsInfo.className = 'info paragraphOpened closed';
 
     };  
 };
