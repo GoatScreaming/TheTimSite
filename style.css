@@ -117,8 +117,8 @@ h1{
     /* font-size: 40px; */
     text-decoration: none;
     transition-property: flex-grow, color, font-size;
-    transition-delay: 250ms, 750ms, 750ms;  
-    transition-duration: 500ms, 250ms, 0ms;
+    transition-delay: 250ms, 750ms, 250ms;  
+    transition-duration: 500ms, 250ms, 500ms;
     /* animation: scale 1s linear   */
 }
 

@@ -81,7 +81,7 @@ liveAuctions.onclick = () => {
 
             liveAuctionsInfo.style.alignItems = 'flex-start'
             liveAuctionsInfo.style.textAlign = 'center'
-            // liveAuctionsInfo.style.fontSize = '20px'
+            liveAuctionsInfo.style.fontSize = '20px'
             liveAuctionsInfo.style.padding = '0px 20px 0px'
 
             liveAuctions.className = 'menu selected middle';
