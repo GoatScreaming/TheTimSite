@@ -124,12 +124,12 @@ ourStory.onclick = () =>{
 
             ourStory.className = 'menu selected middle';
 
-            ourStoryInfo.style.alignItems = 'flex-start'
-            ourStoryInfo.style.textAlign = 'center'
-            ourStoryInfo.style.fontSize = '20px'
-            ourStoryInfo.style.padding = '0px 20px 0px'
+            // ourStoryInfo.style.alignItems = 'flex-start'
+            // ourStoryInfo.style.textAlign = 'center'
+            // ourStoryInfo.style.fontSize = '20px'
+            // ourStoryInfo.style.padding = '0px 20px 0px'
 
-            ourStoryInfo.className = 'info opened';
+            ourStoryInfo.className = 'info paragraphOpened';
 
     }else{
 
@@ -145,9 +145,9 @@ ourStory.onclick = () =>{
            
         ourStory.className = 'menu selected deselected middle';
 
-        ourStoryInfo.style.fontSize = '0px';
+        // ourStoryInfo.style.fontSize = '0px';
 
-        ourStoryInfo.className = 'info opened closed';
+        ourStoryInfo.className = 'info paragraphOpened closed';
 
     };       
 };
