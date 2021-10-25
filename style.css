@@ -109,6 +109,21 @@ h1{
     white-space: pre-wrap;
 }
 
+.paragraphOpened{
+    flex-grow: 5;
+    align-items: flex-start;
+    text-align: center;
+    background-color: white;
+    padding: 0px, 20px, 0px;
+    color: rgb(100, 200, 255);
+    font-size: 20px; 
+    text-decoration: none;
+    transition-property: flex-grow, color, font-size;
+    transition-delay: 250ms, 750ms, 250ms;  
+    transition-duration: 500ms, 250ms, 500ms;
+    /* animation: scale 1s linear   */
+}
+
 
 .opened{
     flex-grow: 5;
