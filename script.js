@@ -67,8 +67,6 @@ onlineAuctions.onclick = () =>{
     };     
 };
 
-// to make your elements not bounce set minHeight not Height
-
 liveAuctions.onclick = () => {
 
     if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
@@ -174,19 +172,3 @@ contactUs.onclick = () => {
 
     };  
 };
-
-// const ContactUsOpenSetMenusHeight = [onlineAuctions, liveAuctions, ourStory, contactUs, leaveFeedback];
-//         ContactUsOpenSetMenusHeight.forEach(Menus => {
-//                     Menus.style.minHeight = (container.clientHeight /= 5).toString() + 'px';
-//             });
-    
-//             // below we are setting the height of the liveAuctionsInfo so when it transforms
-//             // there is an animation. If the height is not set prior it has no idea where to
-//             // transition
-    
-//         contactUsInfo.style.minHeight = (container.clientHeight -= (container.clientHeight /= 5)).toString() + 'px';
-    
-//         const  ContactUsRemoveFlexGrow = [onlineAuctions, liveAuctions, ourStory, contactUs, leaveFeedback];
-//             ContactUsRemoveFlexGrow.forEach(Menus => {
-//                     Menus.style.flexGrow = '0'
-//             });

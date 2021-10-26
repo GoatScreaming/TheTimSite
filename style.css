@@ -121,7 +121,6 @@ h1{
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 750ms, 250ms;  
     transition-duration: 500ms, 250ms, 500ms;
-    /* animation: scale 1s linear   */
 }
 
 
@@ -134,7 +133,6 @@ h1{
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 750ms, 250ms;  
     transition-duration: 500ms, 250ms, 500ms;
-    /* animation: scale 1s linear   */
 }
 
 .closed{
@@ -147,14 +145,6 @@ h1{
 }
 
 .topBottom{
-    /* flex-grow: 0;
-    font-size: 0px;
-    color: transparent;
-    transform-origin: top;
-    transform: scaleY(0);
-    transition-property: color, font-size, scaleY;
-    transition-delay: 0ms, 250ms, 250ms;
-    transition-duration: 250ms, 5000ms, 5000ms; */
     animation-timing-function: ease-in-out;
 }
 
@@ -185,17 +175,3 @@ h1{
         opacity: 1;
     }
 }
-
-/* @keyframes scale {
-    0% {
-        transform: scaleY(0);
-    }
-    100% {
-        transform: scaleY(1);
-    }
-} */
-
-
-
-
-
