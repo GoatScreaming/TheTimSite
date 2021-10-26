@@ -48,7 +48,6 @@ onlineAuctions.onclick = () =>{
         onlineAuctionsInfo.className = 'info opened';
 
         onlineAuctionsInfo.style.textAlign = 'center'
-        // onlineAuctionsInfo.style.padding = '0 20px 0'
 
         leaveFeedback.className = 'menu copyrightClosed opening topBottom'; 
 
