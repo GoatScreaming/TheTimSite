@@ -162,6 +162,15 @@ h1{
     animation-timing-function: linear;
 } 
 
+.copyright{
+    font-size: 20px;
+}
+
+.copyrightClosed{
+    font-size: 0px;
+}
+
+
 @font-face {
     font-family: 'freehand';
     src: url(fonts/Caveat-VariableFont_wght.ttf);
