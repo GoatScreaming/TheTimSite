@@ -1,6 +1,6 @@
-const body = document.querySelector('#body')
-const banner = document.querySelector('#banner')
-const container = document.querySelector('#container')
+const body = document.querySelector('.body')
+const banner = document.querySelector('.banner')
+const container = document.querySelector('.container')
 
 const bannerimg = document.querySelector('.bannerimg')
 
