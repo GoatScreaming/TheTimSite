@@ -19,16 +19,6 @@ const auctionTimeLink = document.querySelector('.auctionTimeLink')
 
 const resizeElem = window.onload = () =>{
 
-    if(body.clientWidth >= 700){
-        
-        bannerimg.src = "UpScaledHallstein21x9.jpg"
-
-    }else{
-
-        bannerimg.src = "UpScaledHallstein16x9.jpg"
-    };
-    console.log(bannerimg.src)
-
     if((body.clientHeight -= banner.clientHeight) >= 253){
 
         container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
