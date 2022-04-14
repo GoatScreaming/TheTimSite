@@ -19,6 +19,17 @@ const auctionTimeLink = document.querySelector('.auctionTimeLink')
 
 const resizeElem = window.onload = () =>{
 
+    // if(body.clientWidth > 750){
+
+    //     bannerimg.src = 'UpScaledHallstein21x9HalfComp.jpg'
+        
+    // }else{
+
+    //     bannerimg.src = 'UpScaledHallstein16x9HalfComp.jpg'
+
+    // };
+
+    
     if((body.clientHeight -= banner.clientHeight) >= 253){
 
         container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
@@ -29,7 +40,7 @@ const resizeElem = window.onload = () =>{
         container.style.height = '253px';
         body.style.overflowY = 'auto';
 
-    };
+    };  
 };
 
 window.onresize = () =>{
