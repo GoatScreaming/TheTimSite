@@ -18,6 +18,8 @@ body{
     /* overflow-y: hidden;  */
     animation: fadeIn 2000ms;
     /* min-width: 200px; */
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .banner{
