@@ -1,4 +1,6 @@
 export const clickMe = liveAuctions.onclick = () => {
+    const body = document.querySelector('#body')
+    const banner = document.querySelector('#banner')
 
     const onlineAuctions = document.querySelector('#onlineAuctions');
     const liveAuctions = document.querySelector('#liveAuctions');
@@ -23,6 +25,17 @@ export const clickMe = liveAuctions.onclick = () => {
 
         leaveFeedback.className = 'menu copyrightClosed opening topBottom';
 
+        // let bodyHeight = body.clientHeight
+        // let bannerHeight = banner.clientHeight
+
+        // let containerHeight = (bodyHeight -= bannerHeight)
+
+        // let paragraphHeight = liveAuctionsInfo.clientHeight
+
+        setTimeout(() => {
+            body.style.overflowY = 'auto'
+        }, 600) 
+
     }else{
 
         onlineAuctions.className = 'menu opening closing topBottom'
@@ -38,5 +51,6 @@ export const clickMe = liveAuctions.onclick = () => {
 
         leaveFeedback.className = 'menu copyright opening closing topBottom';
 
+        body.style.overflowY = 'hidden'
     };  
 };
