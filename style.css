@@ -15,7 +15,7 @@ body{
     /* width: 1500px; */
     min-height: 100%;
     overflow-x: hidden; 
-    overflow-y: hidden;
+    overflow-y: hidden; 
     animation: fadeIn 2000ms;
     /* min-width: 200px; */
 }
@@ -25,10 +25,14 @@ body{
 }
 
 .bannerimg{
-    display: block;
+    display: block;   
     width: 100%;
     position: relative;
     z-index: -1;
+}
+
+.closeBanner{
+    height: 0px;
 }
 
 h1{
@@ -124,6 +128,23 @@ h1{
     transition-duration: 500ms, 250ms, 500ms;
 }
 
+.linkOpened{
+    background-color: white;
+    color: rgb(100, 200, 255);
+    font-size: 40px; 
+    text-decoration: none;
+    transition-property: flex-grow, color, font-size;
+    transition-delay: 250ms, 750ms, 250ms;  
+    transition-duration: 500ms, 250ms, 500ms;
+}
+
+.linkClosed{
+    font-size: 0px;
+    color: transparent;
+    transition-property: flex-grow, color, font-size;
+    transition-delay: 250ms, 0ms, 250ms;  
+    transition-duration: 250ms, 250ms, 250ms;
+}
 
 .opened{
     flex-grow: 5;

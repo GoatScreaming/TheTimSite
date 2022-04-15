@@ -1,8 +1,10 @@
-const body = document.querySelector('.body')
-const banner = document.querySelector('.banner')
-const container = document.querySelector('.container')
+const body = document.querySelector('#body')
+const banner = document.querySelector('#banner')
+const content = document.querySelector('#content')
 
-const bannerimg = document.querySelector('.bannerimg')
+const bannerimg1 = document.querySelector('#bannerimg1')
+const bannerimg2 = document.querySelector('#bannerimg2')
+const bannerimg3 = document.querySelector('#bannerimg3')
 
 const onlineAuctions = document.querySelector('#onlineAuctions');
 const liveAuctions = document.querySelector('#liveAuctions');
@@ -15,41 +17,55 @@ const liveAuctionsInfo = document.querySelector('#liveAuctionsInfo');
 const ourStoryInfo = document.querySelector('#ourStoryInfo');
 const contactUsInfo = document.querySelector('#contactUsInfo');
 
-const auctionTimeLink = document.querySelector('.auctionTimeLink')
+const auctionTimeLink = document.querySelector('#auctionTimeLink'); 
+const contactUsLink = document.querySelector('#contactUsLink');
 
-const resizeElem = window.onload = () =>{
+const resizeElem = window.onload = () => {
 
-    // if(body.clientWidth > 750){
-
-    //     bannerimg.src = 'UpScaledHallstein21x9HalfComp.jpg'
+    if(body.clientWidth >= 750){
         
-    // }else{
-
-    //     bannerimg.src = 'UpScaledHallstein16x9HalfComp.jpg'
-
-    // };
-
+        const topBottomImg = [bannerimg1, bannerimg3];
+        topBottomImg.forEach((banners) => {
+            banners.className = 'bannerimg closeBanner'
+        })
+    
+    }else{  
+        
+        const topBottomImg = [bannerimg1, bannerimg3];
+        topBottomImg.forEach((banners) => {
+            banners.className = 'bannerimg'
+        })
+    
+    };
     
     if((body.clientHeight -= banner.clientHeight) >= 253){
-
-        container.style.minHeight = (body.clientHeight -= banner.clientHeight).toString() + 'px';
+        
+        content.style.minHeight = ((body.clientHeight -= banner.clientHeight) + 1).toString() + 'px';
         body.style.overflowY = 'hidden'
 
     }else{
 
-        container.style.height = '253px';
+        content.style.height = '253px';
         body.style.overflowY = 'auto';
 
     };  
 };
 
-window.onresize = () =>{
+resizeElem()
+
+// I know this looks weird but the page won't load properly if the function
+// is not called globally and if the function does not have the window.onload event
+// you would think you coud just do what is being done on window.resize but you can't
+
+window.onresize = () => {
+
     resizeElem()
+
 };
 
 onlineAuctions.onclick = () =>{
 
-    if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
+    if(onlineAuctions.className != 'menu selected topBottom'){
         
         onlineAuctions.className = 'menu selected topBottom';
 
@@ -60,7 +76,9 @@ onlineAuctions.onclick = () =>{
 
         onlineAuctionsInfo.className = 'info opened';
 
-        onlineAuctionsInfo.style.textAlign = 'center'
+        onlineAuctionsInfo.style.textAlign = 'center';
+        
+        auctionTimeLink.className = 'linkOpened';
 
         leaveFeedback.className = 'menu copyrightClosed opening topBottom'; 
 
@@ -75,6 +93,8 @@ onlineAuctions.onclick = () =>{
 
         onlineAuctionsInfo.className = 'info opened closed';
 
+        auctionTimeLink.className = 'linkOpened linkClosed';
+
         leaveFeedback.className = 'menu copyright opening closing topBottom';
 
     };     
@@ -82,7 +102,7 @@ onlineAuctions.onclick = () =>{
 
 liveAuctions.onclick = () => {
 
-    if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
+    if(onlineAuctions.className != 'menu opening topBottom'){
 
         onlineAuctions.className = 'menu opening topBottom';
 
@@ -117,7 +137,7 @@ liveAuctions.onclick = () => {
 
 ourStory.onclick = () =>{
 
-    if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
+    if(onlineAuctions.className != 'menu opening topBottom'){
 
         onlineAuctions.className = 'menu opening topBottom';
 
@@ -153,7 +173,7 @@ ourStory.onclick = () =>{
 
 contactUs.onclick = () => {
     
-    if((onlineAuctionsInfo.clientHeight += liveAuctionsInfo.clientHeight += ourStoryInfo.clientHeight += contactUsInfo.clientHeight) === 0){
+    if(onlineAuctions.className != 'menu opening topBottom'){
         
         onlineAuctions.className = 'menu opening topBottom';
 
@@ -165,6 +185,8 @@ contactUs.onclick = () => {
         contactUs.className = 'menu selected middle';
 
         contactUsInfo.className = 'info opened';
+
+        contactUsLink.className = 'linkOpened';
 
         leaveFeedback.className = 'menu copyrightClosed opening topBottom';
 
@@ -180,6 +202,8 @@ contactUs.onclick = () => {
         contactUs.className = 'menu selected deselected middle';
 
         contactUsInfo.className = 'info opened closed';
+
+        contactUsLink.className = 'linkOpened linkClosed';
 
         leaveFeedback.className = 'menu copyright opening closing topBottom';
 
