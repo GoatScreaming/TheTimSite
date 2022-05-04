@@ -1,14 +1,13 @@
 export const resizeElem = window.onload = () => {
     
-    const body = document.querySelector('#body');
-    const banner = document.querySelector('#banner');
-    const content = document.querySelector('#content');
+    const body = document.querySelector('#body')
+    const banner = document.querySelector('#banner')
+    const content = document.querySelector('#content')
 
-    const bannerimg1 = document.querySelector('#bannerimg1');
-    const bannerimg3 = document.querySelector('#bannerimg3');
+    const bannerimg1 = document.querySelector('#bannerimg1')
+    const bannerimg3 = document.querySelector('#bannerimg3')
 
-
-    const liveAuctionsInfo = document.querySelector('#liveAuctionsInfo');
+    const buttonContainer = document.querySelector('#buttonContainer')
 
     if(body.clientWidth >= 750){
         
@@ -23,42 +22,60 @@ export const resizeElem = window.onload = () => {
         topBottomImg.forEach((banners) => {
             banners.className = 'bannerimg'
         })
+    
     };
 
-    let bodyHeight = body.clientHeight;
-    let bannerHeight = banner.clientHeight;
+    // this is setting the container height dynamically
 
-    let containerHeight = (bodyHeight -= bannerHeight);
+    let bodyHeight = body.clientHeight 
+    let bannerHeight = banner.clientHeight
+
+    let containerHeight = (bodyHeight -= bannerHeight)
+
+    let totalHeight = (bodyHeight += bannerHeight)
+
+    console.log(bodyHeight)
     
     if(containerHeight >= 253){
-        
-        content.style.minHeight = (containerHeight += 1).toString() + 'px';
-        body.style.overflowX = 'hidden'
-        
-        let isInfoOpen = [liveAuctionsInfo.clientHeight]
-        isInfoOpen.forEach((info) => {
-            if(info === 0){
-                body.style.overflowY = 'hidden'        
-            }
-        }) 
 
+        content.style.minHeight = (containerHeight += 1).toString() + 'px';
+        
+        if(body.style.overflowY != 'auto'){
+            body.style.overflowY = 'hidden'
+        }
+
+        buttonContainer.style.bottom = '7px';
+        
     }else{
 
-        content.style.minHeight = '253px';
-        body.style.overflowX = 'hidden'
+        content.style.height = '253px';
         body.style.overflowY = 'auto';
-        
-    };  
-};
 
-resizeElem()
+    };
+};
 
 // I know this looks weird but the page won't load properly if the function
 // is not called globally and if the function does not have the window.onload event
-// you would think you coud just do what is being done on window.resize but you can't
+// you would think you could just do what is being done on window.resize but you can't
 
 export const resize = window.onresize = () => {
 
     resizeElem()
 
+};
+
+window.onscroll = () => {
+    let scrolled = window.scrollY;
+    if(scrolled > 20){
+        buttonContainer.style.opacity = '1';
+    }else{
+        buttonContainer.style.opacity = '0';    
+    }
+};
+
+buttonContainer.onclick = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
 };

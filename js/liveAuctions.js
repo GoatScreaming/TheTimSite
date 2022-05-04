@@ -1,8 +1,7 @@
 export const clickMe = liveAuctions.onclick = () => {
-    const body = document.querySelector('#body')
-    const banner = document.querySelector('#banner')
-    const content = document.querySelector('#content')
 
+    const body = document.querySelector('#body')
+    
     const onlineAuctions = document.querySelector('#onlineAuctions');
     const liveAuctions = document.querySelector('#liveAuctions');
     const ourStory = document.querySelector('#ourStory');
@@ -17,7 +16,7 @@ export const clickMe = liveAuctions.onclick = () => {
 
         const middleLiveAuctions = [ourStory, contactUs];
                 middleLiveAuctions.forEach(menus => {
-                menus.className = 'menu opening middle';       
+                menus.className = 'menu opening middle';
         });
 
         liveAuctions.className = 'menu selected middle';
@@ -27,39 +26,25 @@ export const clickMe = liveAuctions.onclick = () => {
         leaveFeedback.className = 'menu copyrightClosed opening topBottom';
 
         setTimeout(() => {
-            body.style.overflowY = 'auto'
+            body.style.overflowY = 'auto'; 
         }, 750)
         
+        
     }else{
-        window.scrollTo(0, 0);
 
-        setTimeout(() => {
-            let bodyHeight = body.clientHeight;
-            let bannerHeight = banner.clientHeight;
+        onlineAuctions.className = 'menu opening closing topBottom'
 
-            let containerHeight = (bodyHeight -= bannerHeight);
+        const middleLiveAuctions = [ourStory, contactUs];
+                middleLiveAuctions.forEach(menus => {
+                menus.className = 'menu opening closing middle';
+            });
+           
+        liveAuctions.className = 'menu selected deselected middle';
 
-            console.log(containerHeight)
+        liveAuctionsInfo.className = 'info paragraphOpened closed';
 
-            if(containerHeight >= 253){
-                body.style.overflowY = 'hidden'       
-            }
+        leaveFeedback.className = 'menu copyright opening closing topBottom';
 
-            onlineAuctions.className = 'menu opening closing topBottom'
-
-            const middleLiveAuctions = [ourStory, contactUs];
-                    middleLiveAuctions.forEach(menus => {
-                    menus.className = 'menu opening closing middle';
-                });
-            
-            liveAuctions.className = 'menu selected deselected middle';
-
-            liveAuctionsInfo.className = 'info paragraphOpened closed';
-
-            leaveFeedback.className = 'menu copyright opening closing topBottom';
-
-            // body.style.overflowY = 'hidden'
-            
-        }, 250);      
-    };   
+        body.style.overflowY = 'hidden';
+    };  
 };

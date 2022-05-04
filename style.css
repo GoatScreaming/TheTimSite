@@ -8,31 +8,27 @@ html{
     height: 100%;
     display: flex;
     flex-direction: column;
-    scroll-behavior: smooth;
-    /* scrollbar-width: none;  */
 }
 
 body{
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
     width: 100%; 
     /* width: 1500px; */
     min-height: 100%;
     /* overflow-x: hidden; 
     overflow-y: hidden;  */
     animation: fadeIn 2000ms;
-    /* min-width: 200px; */ 
+    min-width: 200px;
 }
 
 .banner{
     position: relative;
-    z-index: -1;
 }
 
 .bannerimg{
-    position: relative;
     display: block;   
-    width: 100%;  
+    width: 100%;
+    position: relative;
+    z-index: -1;
 }
 
 .closeBanner{
@@ -54,11 +50,10 @@ h1{
 }
 
 .container {
-    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 500px;
-    background-color: #66c9ff;
+    background-color: rgb(100, 200, 255);
     font-family: freehand;
     font-weight: 500;
 }
@@ -71,7 +66,8 @@ h1{
     cursor: pointer;
     font-size: 40px;
     color: white; 
-    white-space: pre-wrap; 
+    white-space: pre-wrap;
+       
 }
 
 .selected{
@@ -119,18 +115,66 @@ h1{
 }
 
 .paragraphOpened{
-    /* flex-grow: 5; */
-    height: 3000px;
+    flex-grow: 5;
     align-items: flex-start;
+    display: inline-flex;
     text-align: center;
     background-color: white;
-    padding: 0px 30px 0px 50px; 
+    padding: 0px 40px 0px;
     color: rgb(100, 200, 255);
     font-size: 20px; 
     text-decoration: none;
     transition-property: flex-grow, color, font-size;
     transition-delay: 250ms, 750ms, 250ms;  
     transition-duration: 500ms, 250ms, 500ms;
+}
+
+#buttonContainer{
+    position: sticky;
+    display: flex;
+    opacity: 0;
+    margin: 0px 7px 0px 0px;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    rotate: -90deg;
+    left: 100%;
+    bottom: 7px;
+    transition: 500ms;
+}
+
+.arrow::before{
+    position: absolute;
+    content: "";
+    background-color: blue;
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    right: -2px;
+    top: -6px;
+    rotate: 45deg;
+}
+
+.arrow{
+    position: sticky;
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    /* top: 400px; */
+}
+
+.arrow::after{
+    position: absolute;
+    content: "";
+    background-color: red;
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    right: -2px;
+    top: 6px;
+    rotate: -45deg;
 }
 
 .linkOpened{
@@ -187,72 +231,9 @@ h1{
     font-size: 0px;
 }
 
-.box{
-    background-color: red;
-    display: inline-block;
-    height: 60px;
-    resize: none;
+#leaveFeedback{
+    cursor: default;
 }
-
-.buttonOpen{
-    position: sticky;
-    background-color: black;
-    width: 30px;
-    height: 5px;
-    border-radius: 5px;
-    top: 600px;
-}
-
-.buttonClosed{
-    position: sticky;
-    background-color: green;
-    width: 0px;
-    height: 0px;
-    border-radius: 0px;
-    /* top: 600px; */
-    rotate: 0deg;
-    opacity: 0;
-}
-
-.buttonOpen::after{
-    content: "";
-    display: inline-block;
-    background-color: red;
-    width: 20px;
-    height: 5px;
-    border-radius: 5px;
-    rotate: -45deg;
-    position: absolute;
-    right: -9px;
-    top: 9px;
-}
-
-.buttonOpen::after{
-    content: "";
-    display: inline-block;
-    background-color: blue;
-    width: 30px;
-    height: 5px;
-    border-radius: 5px;
-    /* rotate: -45deg; */
-    position: absolute;
-    right: -5px;
-    top: 9px;
-}
-
-.buttonOpen::after{
-    content: "";
-    display: inline-block;
-    background-color: green;
-    width: 20px;
-    height: 5px;
-    border-radius: 5px;
-    rotate: -90deg;
-    position: absolute;
-    right: 4.5px;
-    top: 7.5px;
-}
-
 
 @font-face {
     font-family: 'freehand';
