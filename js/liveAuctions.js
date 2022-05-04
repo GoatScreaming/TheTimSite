@@ -1,6 +1,7 @@
 export const clickMe = liveAuctions.onclick = () => {
     const body = document.querySelector('#body')
     const banner = document.querySelector('#banner')
+    const content = document.querySelector('#content')
 
     const onlineAuctions = document.querySelector('#onlineAuctions');
     const liveAuctions = document.querySelector('#liveAuctions');
@@ -16,7 +17,7 @@ export const clickMe = liveAuctions.onclick = () => {
 
         const middleLiveAuctions = [ourStory, contactUs];
                 middleLiveAuctions.forEach(menus => {
-                menus.className = 'menu opening middle';
+                menus.className = 'menu opening middle';       
         });
 
         liveAuctions.className = 'menu selected middle';
@@ -25,32 +26,40 @@ export const clickMe = liveAuctions.onclick = () => {
 
         leaveFeedback.className = 'menu copyrightClosed opening topBottom';
 
-        // let bodyHeight = body.clientHeight
-        // let bannerHeight = banner.clientHeight
-
-        // let containerHeight = (bodyHeight -= bannerHeight)
-
-        // let paragraphHeight = liveAuctionsInfo.clientHeight
-
         setTimeout(() => {
             body.style.overflowY = 'auto'
-        }, 600) 
-
+        }, 750)
+        
     }else{
+        window.scrollTo(0, 0);
 
-        onlineAuctions.className = 'menu opening closing topBottom'
+        setTimeout(() => {
+            let bodyHeight = body.clientHeight;
+            let bannerHeight = banner.clientHeight;
 
-        const middleLiveAuctions = [ourStory, contactUs];
-                middleLiveAuctions.forEach(menus => {
-                menus.className = 'menu opening closing middle';
-            });
-           
-        liveAuctions.className = 'menu selected deselected middle';
+            let containerHeight = (bodyHeight -= bannerHeight);
 
-        liveAuctionsInfo.className = 'info paragraphOpened closed';
+            console.log(containerHeight)
 
-        leaveFeedback.className = 'menu copyright opening closing topBottom';
+            if(containerHeight >= 253){
+                body.style.overflowY = 'hidden'       
+            }
 
-        body.style.overflowY = 'hidden'
-    };  
+            onlineAuctions.className = 'menu opening closing topBottom'
+
+            const middleLiveAuctions = [ourStory, contactUs];
+                    middleLiveAuctions.forEach(menus => {
+                    menus.className = 'menu opening closing middle';
+                });
+            
+            liveAuctions.className = 'menu selected deselected middle';
+
+            liveAuctionsInfo.className = 'info paragraphOpened closed';
+
+            leaveFeedback.className = 'menu copyright opening closing topBottom';
+
+            // body.style.overflowY = 'hidden'
+            
+        }, 250);      
+    };   
 };

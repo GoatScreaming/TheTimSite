@@ -4,3 +4,4 @@ import * as onlineAuctions from './onlineAuctions.js';
 import * as liveAuctions from './liveAuctions.js'
 import * as ourStory from './ourStory.js'
 import * as contactUs from './contactUs.js'
+import * as toTopButton from './toTopButton.js'

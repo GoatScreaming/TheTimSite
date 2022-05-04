@@ -1,11 +1,14 @@
 export const resizeElem = window.onload = () => {
     
-    const body = document.querySelector('#body')
-    const banner = document.querySelector('#banner')
-    const content = document.querySelector('#content')
+    const body = document.querySelector('#body');
+    const banner = document.querySelector('#banner');
+    const content = document.querySelector('#content');
 
-    const bannerimg1 = document.querySelector('#bannerimg1')
-    const bannerimg3 = document.querySelector('#bannerimg3')
+    const bannerimg1 = document.querySelector('#bannerimg1');
+    const bannerimg3 = document.querySelector('#bannerimg3');
+
+
+    const liveAuctionsInfo = document.querySelector('#liveAuctionsInfo');
 
     if(body.clientWidth >= 750){
         
@@ -20,26 +23,35 @@ export const resizeElem = window.onload = () => {
         topBottomImg.forEach((banners) => {
             banners.className = 'bannerimg'
         })
-    
     };
 
-    let bodyHeight = body.clientHeight
-    let bannerHeight = banner.clientHeight
+    let bodyHeight = body.clientHeight;
+    let bannerHeight = banner.clientHeight;
 
-    let containerHeight = (bodyHeight -= bannerHeight)
+    let containerHeight = (bodyHeight -= bannerHeight);
     
     if(containerHeight >= 253){
         
         content.style.minHeight = (containerHeight += 1).toString() + 'px';
-        body.style.overflowY = 'hidden'
+        body.style.overflowX = 'hidden'
+        
+        let isInfoOpen = [liveAuctionsInfo.clientHeight]
+        isInfoOpen.forEach((info) => {
+            if(info === 0){
+                body.style.overflowY = 'hidden'        
+            }
+        }) 
 
     }else{
 
-        content.style.height = '253px';
+        content.style.minHeight = '253px';
+        body.style.overflowX = 'hidden'
         body.style.overflowY = 'auto';
-
+        
     };  
 };
+
+resizeElem()
 
 // I know this looks weird but the page won't load properly if the function
 // is not called globally and if the function does not have the window.onload event
